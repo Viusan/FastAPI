@@ -3,3 +3,5 @@ py -m fastapi dev <filename>
 
 everything else other then GET has to be done in the docs page, if you just want to see taks you can write in the url
 also added a database to, using pydantic as data validation, and real db using SQLite and SQLAlchemy
+and using sqlite browser you can see the database structure and all the data you have created
+
