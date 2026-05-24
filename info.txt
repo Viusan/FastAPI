@@ -2,3 +2,4 @@ if you want to run a server for a file it is:
 py -m fastapi dev <filename>
 
 everything else other then GET has to be done in the docs page, if you just want to see taks you can write in the url
+also added a database to, using pydantic as data validation, and real db using SQLite and SQLAlchemy
