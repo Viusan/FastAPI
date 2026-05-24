@@ -8,7 +8,13 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
+class User(BaseModel):
+    name: str
+    email: str
+    password: str
+
 class Task(BaseModel): #no need for id here since it auto increments and creates unique
+    user_id: int
     name: str
     description: str
     done: bool = False
