@@ -10,7 +10,7 @@ COPY requirements.txt .
 #installs all packages inside the container
 RUN pip install --no-cache-dir -r requirements.txt 
 
-#copies project files into container
+#copies project files into container, so all the python code is now copied
 COPY . . 
 
 #run app on port 8000
