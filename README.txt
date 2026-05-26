@@ -12,3 +12,8 @@ Containerized the app with Docker and deployed to AWS ECS using ECR to store the
 Live on AWS Fargate at http://13.50.108.179:8000/docs (i have most likely turned it offline to avoid charges)
 
 To run clone repo, create virtual environment, install dependencies and run the server
+
+What was learnt from this simple project was how FASTApi works and genrelly api and methods.
+Basic backend security like tokens and hashing.
+About how dockerfiles, images and containers work. Why its more efficient to use Docker.
+How to set up AWS and very basic cloud deployment works with this project. 
