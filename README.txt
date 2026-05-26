@@ -16,4 +16,5 @@ To run clone repo, create virtual environment, install dependencies and run the 
 What was learnt from this simple project was how FASTApi works and genrelly api and methods.
 Basic backend security like tokens and hashing.
 About how dockerfiles, images and containers work. Why its more efficient to use Docker.
-How to set up AWS and very basic cloud deployment works with this project. 
+How to set up AWS and very basic cloud deployment works with this project.
+How ECR is storage for images in cloud, and ECS is what actually runs container on AWS infrastructure.
