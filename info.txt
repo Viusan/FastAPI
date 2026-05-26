@@ -1,6 +1,10 @@
 if you want to run a server for a file it is:
 py -m fastapi dev <filename>
 
+i added dockerfile and to run do docker build -t todo-api .
+that creates an image then from image do docker run -p 8000:8000 todo-api 
+that starts a container
+
 everything else other then GET has to be done in the docs page, if you just want to see taks you can write in the url
 also added a database to, using pydantic as data validation, and real db using SQLite and SQLAlchemy
 and using sqlite browser you can see the database structure and all the data you have created
@@ -8,3 +12,4 @@ and using sqlite browser you can see the database structure and all the data you
 Depends() basically says run function first then pass result in as paramenter.
 Example is def create_task(current_user: models.User = Depends(get_current_user)): 
 where before running crete_task it runs get_current_user and passses whatever is got as current_user
+
