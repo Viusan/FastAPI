@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 from jose import JWTError, jwt
 from passlib.context import CryptContext
 
-SECRET_KEY = "your-secret-key-here" #secret string server uses to sign tokens
+SECRET_KEY = "aiduhadibef9un9ufq92nbcq" #secret string server uses to sign tokens
 ALGORITHM = "HS256" #algo standard for JWT
 ACCESS_TOKEN_EXPIRE_MINUTES = 30 #after 30 min user needs to log in again
 
