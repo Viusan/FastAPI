@@ -1,0 +1,6 @@
+tasks.db
+.env
+__pychache__/
+*.pyc
+venv/
+.gitignore
