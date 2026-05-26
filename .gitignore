@@ -1,1 +1,10 @@
 /main.py
+
+__pycache__
+*.pyc
+
+#databases
+*.db
+
+#env variables
+*.env

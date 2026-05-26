@@ -5,3 +5,6 @@ everything else other then GET has to be done in the docs page, if you just want
 also added a database to, using pydantic as data validation, and real db using SQLite and SQLAlchemy
 and using sqlite browser you can see the database structure and all the data you have created
 
+Depends() basically says run function first then pass result in as paramenter.
+Example is def create_task(current_user: models.User = Depends(get_current_user)): 
+where before running crete_task it runs get_current_user and passses whatever is got as current_user
