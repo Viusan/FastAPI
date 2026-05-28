@@ -7,6 +7,9 @@ import os
 #if it does not exist then we use sqlitepy 
 SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./tasks.db")
 
+#function tries to connect to database, if it fails it tries again up to 5 times
+#reason being in compsoe file we have depends on db, which waits for postgresql container to start
+#not for postgresql to actually be ready to accept connections (which takes a couple extra seconds)
 def create_engine_with_retry():
     retries = 5
     while retries > 0:
