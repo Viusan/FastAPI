@@ -18,3 +18,12 @@ services: #what containers we want to run and each service is a container
       - db
     environment: #passes db conn string to app so it knows where to find postgresql
       DATABASE_URL: postgresql://postgres:postgres@db:5432/todoapp
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes: #we are replacing the default conf file with the one that we created
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - api    
