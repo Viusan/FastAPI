@@ -1,9 +1,9 @@
 version: "3.8" #what version of docker compose syntax we using
 
-service: #what containers we want to run and each service is a container
+services: #what containers we want to run and each service is a container
   db: #postgresql db container
     image: postgres:15 #this is a standard img so no dockerfile needed
-    enviornment: #enviornment sets up username, password and db name 
+    environment: #enviornment sets up username, password and db name 
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: todoapp
@@ -16,5 +16,5 @@ service: #what containers we want to run and each service is a container
       - "8000:8000"
     depends_on: #this means to start db container before api 
       - db
-    enviornment: #passes db conn string to app so it knows where to find postgresql
+    environment: #passes db conn string to app so it knows where to find postgresql
       DATABASE_URL: postgresql://postgres:postgres@db:5432/todoapp
