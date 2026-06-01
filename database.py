@@ -11,7 +11,7 @@ SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./tasks.db")
 #reason being in compsoe file we have depends on db, which waits for postgresql container to start
 #not for postgresql to actually be ready to accept connections (which takes a couple extra seconds)
 def create_engine_with_retry():
-    retries = 5
+    retries = 10
     while retries > 0:
         try:
             engine = create_engine(SQLALCHEMY_DATABASE_URL)
@@ -20,7 +20,7 @@ def create_engine_with_retry():
         except Exception:
             retries -= 1
             print(f"Database not ready, retrying... {retries} attempts left")
-            time.sleep(3)
+            time.sleep(5)
     raise Exception("Could not connect to database")
 
 
